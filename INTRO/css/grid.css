@@ -1,0 +1,58 @@
+.main {
+  width: 100%;
+  background: greenyellow;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: start;
+  grid-template-areas:
+    "A A B C D D"
+    "A A B E F Q"
+    "T T S E J J"
+    "V W S P J J";
+  gap: 6px;
+  
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.pic-1 {
+  grid-area: A;
+}
+.pic-2 {
+  grid-area: T;
+}
+.pic-3 {
+  grid-area: V;
+}
+.pic-4 {
+  grid-area: W;
+}
+
+.pic-5 {
+  grid-area: B;
+}
+.pic-6 {
+  grid-area: S;
+}
+.pic-7 {
+  grid-area: C;
+}
+.pic-8 {
+  grid-area: E;
+}
+.pic-9 {
+  grid-area: P;
+}
+.pic-10 {
+  grid-area: D;
+}
+.pic-11 {
+  grid-area: F;
+}
+.pic-12 {
+  grid-area: Q;
+}
+.pic-13 {
+  grid-area: J;
+}
