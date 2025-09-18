@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAROCO Global Transport & Logistics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7f9;
+        }
+
+        .header {
+            background-color: #f5f7f9;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .auth-links {
+            display: flex;
+            gap: 20px;
+            button{
+                height: 30px;
+                width: 150px;
+                margin-top: -5px;
+                background-color: white;
+                border: none;
+            }
+        }
+
+        .auth-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color:#f5f7f9;;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+            line-height: 20px;
+        }
+
+        .company-logo {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: -90px;
+        }
+
+        .company-logo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            color: white;
+            font-weight: bold;
+        }
+
+        .company-name {
+            color: #007bff;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .company-tagline {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .company-info h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .info-item {
+            margin-bottom: 10px;
+        }
+
+        .info-label {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .info-value {
+            color: #333;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        .working-hours {
+            margin-top: 20px;
+        }
+
+        .main-content {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #4a5568, #2d3748);
+            color: white;
+            padding: 40px;
+        }
+
+        .hero-section h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .hero-section .subtitle {
+            color: #a0aec0;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .services-list {
+            color: #e2e8f0;
+            font-size: 14px;
+        }
+
+        .tabs {
+            display: flex;
+            background-color: #f7fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tab {
+            padding: 15px 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .tab.active {
+            background-color: white;
+            color: #333;
+            border-bottom: 2px solid orange;
+        }
+
+        .tab-content {
+            padding: 30px;
+        }
+
+        .cargo-section {
+            margin-bottom: 25px;
+        }
+
+        .cargo-section h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .cargo-section p {
+            color: #666;
+            font-size: 14px;
+        }
+
+
+
+        .cta-section {
+            background-color: #f5f7f9;;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .cta-container h2 {
+            color: #333;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .signup-btn {
+            background-color: #ff9500;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            width: 200px;
+        }
+
+        .signup-btn:hover {
+            background-color: #e6850e;
+        }
+
+        .footer {
+            background-color:#f5f7f9;;
+            padding: 50px 0 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+        }
+
+        .footer-column h3 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-column a:hover {
+            color: #007bff;
+        }
+
+        .footer-column a.light-text {
+            color: #ccc;
+        }
+
+        .newsletter-form {
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-icon:hover {
+            background-color:yellow;
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #e2e8f0;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: left;
+        }
+
+        .footer-bottom p {
+            color: #666;
+            font-size: 12px;
+            margin: 0;
+        }
+        .custom-btn {
+      background-color: #ff9800; 
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 24px;
+      cursor: pointer;
+      font-size: 16px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .custom-btn:hover {
+      background-color: #e68900;
+    }
+
+
+@media (max-width: 600px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links li:nth-child(4),
+  .nav-links li:nth-child(5),
+  .nav-links li:nth-child(6) {
+    display: none;
+  }
+
+  .hero-section h1 {
+    font-size: 22px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 992px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: 2;
+    }
+
+    .main-content {
+        order: 1;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 993px) {
+    .main-container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 300px;
+    }
+
+    .main-content {
+        flex: 1;
+    }
+
+    .footer-container {
+        flex-direction: row;
+    }
+}
+
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo"><img src="https://b2021648.smushcdn.com/2021648/wp-content/uploads/2017/08/logo-tera-logistics-640x147.png?lossy=1&strip=1&webp=1" alt="" style="height: 40px;"></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Browse Providers <i class="fa-solid fa-chevron-down" style="font-weight: bolder;"></i>
+</a></li>
+                    <li><a href="#">Freight Rate <i class="fa-solid fa-chevron-down" style="font-weight: bolder;"></i></a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="#">Login</a>
+                <a href="#"><button>Create account</button></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="company-logo">
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #007bff; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: white; font-weight: bold; font-size: 18px;">
+                    AAROCO
+                </div>
+                <div class="company-name">AAROCO GLOBAL</div>
+                <div class="company-tagline">Africa & Logistics Services</div>
+            </div>
+
+            <div class="company-info">
+                <h3>Company information</h3>
+                
+                <div class="info-item">
+                    <div class="info-label">Year founded</div>
+                    <div class="info-value">2017</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Company size</div>
+                    <div class="info-value">1-20 employees</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Head office</div>
+                    <div class="info-value">
+                        REGIONAL HEAD OFFICE:<br>
+                        Kamola Plaza,<br>
+                        31 Okota Road, Isolo,<br>
+                        Lagos, Nigeria, West Africa.<br>
+                        Lagos, Lagos, Nigeria<br>
+                        100001
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Tel:</div>
+                    <div class="info-value">+2347030383219</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Email:</div>
+                    <div class="info-value">enquiries.africa@aarocoglobal.com</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">URL:</div>
+                    <div class="info-value">https://www.aarocoglobal.com/contact-us/</div>
+                </div>
+
+                <div class="working-hours">
+                    <h3>Working hours</h3>
+                    <div class="info-item">
+                        <div class="info-label">Monday - Friday</div>
+                        <div class="info-value">Open 24 hours</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="hero-section">
+                <h1>AAROCO Global Transport & Logistics</h1>
+                <div class="subtitle"></div>
+                
+                <p>We are an international reliable logistics, Freight Forwarding,& Project Logistics Management Company, Privately owned and operates in the main ports in Africa regions. When it comes to heavy lift and project cargoes, AAROCO Global is your preferred choice in Africa. We help you optimize your supply chain,increase your competitive advantages and maximize your return on investment.we deliver on our promise with effectiveness, efficiency,speed.</p>
+                
+                <div class="contact-info">
+                    Contact us at: http://www.aarocoglobal.com: sales.africa@aarocoglobal.com
+                </div>
+                
+                <div class="services-list">
+                    <p><strong>Our services are:</strong></p>
+                    <p>Transportation, Customs Brokerage, Trading Documents (international), Truck (Inland Haulage), Project Cargo, Marine Insurance, etc</p>
+                </div>
+            </section>
+
+            <div class="tabs">
+                <button class="tab active">Description</button>
+                <button class="tab">Branch Office</button>
+                <button class="tab">Gallery</button>
+                <button class="tab">Review</button>
+            </div>
+
+            <div class="tab-content">
+                <div class="cargo-section">
+                    <h3>Cargo we mostly handle:</h3>
+                    <p>General cargo</p>
+                </div>
+
+                <div class="cargo-section">
+                    <h3>Service we mostly handle:</h3>
+                    <p>Customs broker</p>
+                </div>
+
+                <div class="cargo-section">
+                    <h3>Mostly frequent target area:</h3>
+                    <p>United Kingdom (UK)</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="cta-section">
+        <div class="cta-container">
+            <h2>Are you a shipper/freight forwarder?</h2>
+            <a href="#" class="signup-btn">Sign Up Now!</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Shipper</h3>
+                <ul>
+                    <li><a href="#">Incoterms Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 30px;">Browse Providers</h3>
+                <ul>
+                    <li><a href="#">Forwarders</a></li>
+                    <li><a href="#">Warehouses</a></li>
+                    <li><a href="#">Trucks</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Freight Schedule</h3>
+                <ul>
+                    <li><a href="#">Full Container Load</a></li>
+                    <li><a href="#">Less Container Load</a></li>
+                    <li><a href="#" class="light-text">Ocean Break Bulk</a></li>
+                    <li><a href="#">Air Freight Rate</a></li>
+                    <li><a href="#" class="light-text">Full Truck Load</a></li>
+                    <li><a href="#" class="light-text">Less Truck Load</a></li>
+                    <li><a href="#" class="light-text">Truck Charter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Subscribe to our newsletter</h3>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                </div>
+                
+                <h3 style="margin-top: 30px;">Follow</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"> <i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Tera Logistics. All rights reserved.</p>
+        </div>
+    </footer>
+    <button class="custom-btn">Click Here to Send Message</button>
+
+
+</body>
+</html>
