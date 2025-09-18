@@ -1,145 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AAROCO</title>
-    <style>
-      body {
-        margin: 0px;
-        padding: 0px;
-        background-color: blue;
-      }
-      a {
-        text-decoration: none;
-      }
-      .man {
-      }
-      header a {
-        padding: 18px 0;
-        color: blanchedalmond;
-      }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAROCO</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-color: blue;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .man {}
+
+    header a {
+      padding: 18px 0;
+      color: blanchedalmond;
+    }
+
+    header {
+      height: 70px;
+      width: 100%;
+      background: red;
+      justify-content: space-around;
+      display: flex;
+      padding: 15px;
+    }
+
+    header img {
+      margin-left: 70px;
+    }
+
+    .manside {
+      display: flex;
+    }
+
+    aside {
+      height: 850px;
+      width: 30%;
+      background-color: greenyellow;
+      text-align: center;
+    }
+
+    main {
+      height: 850px;
+      width: 70%;
+      background-color: white;
+    }
+
+    .sec1 {
+      height: 300px;
+      width: 100%;
+      background: pink;
+    }
+
+    .sec2 {
+      height: 300px;
+      width: 100%;
+      background: orange;
+    }
+
+    .sec3 {
+      height: 250px;
+      width: 100%;
+      background: pink;
+    }
+
+    footer {
+      height: 100px;
+      width: 100%;
+      background: purple;
+    }
+
+    @media screen and (max-width:860px) {
+
       header {
-        height: 70px;
-        width: 100%;
-        background: red;
-        justify-content: space-around;
-        display: flex;
-        padding: 15px;
-      }
-      header img {
-        margin-left: 70px;
-      }
-      .manside {
-        display: flex;
-      }
-      aside {
-        height: 850px;
-        width: 30%;
-        background-color: greenyellow;
-        text-align: center;
-      }
-
-      main {
-        height: 850px;
-        width: 70%;
-        background-color: white;
-      }
-      .sec1{
-        height: 300px;
-        width: 100%;
-        background:pink;
-      }
-      .sec2{
-        height: 300px;
-        width: 100%;
-        background:orange;
-      }
-      .sec3{
-        height: 250px;
-        width: 100%;
-        background:pink;
-      }
-      
-      footer {
-        height: 100px;
-        width: 100%;
-        background: purple;
-      }
-
-      @media screen and (max-width:860px){
-
-        header{
         display: none;
-        }
       }
-      
-      
-        
-    </style>
-  </head>
-  <body>
-    <div class="man">
-      <header>
-        <img
-          src="https://b2021648.smushcdn.com/2021648/wp-content/uploads/2017/08/logo-tera-logistics-640x147.png?lossy=1&strip=1&webp=1.png"
-          alt=""
-          width="150px"
-        />
-        <a href="">Browse Providers</a>
-        <a href="">Freigh Rate</a>
-        <a href="">About Us</a>
-        <a href="">Pricing</a>
-        <a href="">Blog</a>
-        <a href="">FAQS</a>
-        <a href="">Contact</a>
-        <a href="">Login</a>
-        <button style="width: 120px; height: 40px">Create account</button>
-      </header>
-      <div class="manside">
-        <aside>
-          <img src="/INTRO/pic/Screenshot 2025-09-04 095427.png" alt="">
-          <p>
-          <h3>Company Information</h3>
-            <span><b>Year Founded</b></span> <span>2017</span><br><br>
-            <span><b>Company Size</b></span> <span>1-20 Employees</span><br><br>
-            <h3>Head Office</h3><br><br>
-            <span>REGIONAL HEAD OFFICE:</span><br><br>
-            <span>Kamola Plaza,</span><br><br>
-            <span>31 Okota Road, Isolo.</span><br><br>
-            <span>Lagos, Nigeria, West Africa.</span><br><br>
-            <span>Lagos, Lagos, Nigeria <br> 100001</span><br><br>
-            <span>Tel: +2347030383219</span><br><br>
-            <span>Email: enquiries.africa@ <br>aarocoglobal.com</span><br><br>
-            <span>URL: <a href="">https://www.aarocoglobal.com/contact-us/</a></span><br><br>
-          </p>
-          <p>
-          <h3>Working Hours</h3>
-          <span>Monday -</span><span>Open 24</span><br><br>
-          <span>Friday</span><span> Hours</span>
-          </p>
-          
-        </aside>
-        <main>
-          <section  class="sec1">
+    }
+  </style>
+</head>
 
-          </section>
-          <section class="sec2">
+<body>
+  <div class="man">
+    <header>
+      <img
+        src="https://b2021648.smushcdn.com/2021648/wp-content/uploads/2017/08/logo-tera-logistics-640x147.png?lossy=1&strip=1&webp=1.png"
+        alt="" width="150px" />
+      <a href="">Browse Providers <i class="fas fa-chevron-down"></i>
+      </a>
+      <a href="">Freigh Rate</a>
+      <a href="">About Us</a>
+      <a href="">Pricing</a>
+      <a href="">Blog</a>
+      <a href="">FAQS</a>
+      <a href="">Contact</a>
+      <a href="">Login</a>
+      <button style="width: 120px; height: 40px">Create account</button>
+    </header>
+    <div class="manside">
+      <aside>
+        <img src="/INTRO/pic/Screenshot 2025-09-04 095427.png" alt="">
+        <p>
+        <h3>Company Information</h3>
+        <span><b>Year Founded</b></span> <span>2017</span><br><br>
+        <span><b>Company Size</b></span> <span>1-20 Employees</span><br><br>
+        <h3>Head Office</h3><br><br>
+        <span>REGIONAL HEAD OFFICE:</span><br><br>
+        <span>Kamola Plaza,</span><br><br>
+        <span>31 Okota Road, Isolo.</span><br><br>
+        <span>Lagos, Nigeria, West Africa.</span><br><br>
+        <span>Lagos, Lagos, Nigeria <br> 100001</span><br><br>
+        <span>Tel: +2347030383219</span><br><br>
+        <span>Email: enquiries.africa@ <br>aarocoglobal.com</span><br><br>
+        <span>URL: <a href="">https://www.aarocoglobal.com/contact-us/</a></span><br><br>
+        </p>
+        <p>
+        <h3>Working Hours</h3>
+        <span>Monday -</span><span>Open 24</span><br><br>
+        <span>Friday</span><span> Hours</span>
+        </p>
 
-          </section>
-          <section class="sec3">
+      </aside>
+      <main>
+        <section class="sec1">
 
-          </section>
-        </main>
-        <aside>
+        </section>
+        <section class="sec2">
 
-        </aside>
-      </div>
-      <div style="height: 100px; background:green;">
+        </section>
+        <section class="sec3">
 
-      </div>
-      <footer>
-      </footer>
+        </section>
+      </main>
+      <aside>
+
+      </aside>
     </div>
-  </body>
+    <div style="height: 100px; background:green;">
+
+    </div>
+    <footer>
+      <img src="./pic/glacier-7187291_1280.jpg" alt="">
+    </footer>
+  </div>
+</body>
+
 </html>
